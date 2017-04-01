@@ -5,8 +5,14 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('sleepaidenweb:server');
 var http = require('http');
+var winston = require('winston')
+
+if (process.env.NODE_ENV === 'production') {
+  winston.level = 'error';
+} else {
+  winston.level = 'debug';
+}
 
 /**
  * Get port from environment and store in Express.
@@ -86,5 +92,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  winston.log('info', 'Listening on ' + bind);
 }
