@@ -108,18 +108,6 @@ div.iphone-mockup {
     opacity:0.2;
 }
 
-.download_btn {
-    position: relative;
-    display: inline-block;
-    width: 173px;
-    height: 51px;
-    margin-bottom: 40px;
-    -ms-background-size: 100%;
-    background-size: 100%;
-    background-position: 50%;
-    background-repeat: no-repeat;
-}
-
 .icon-feature {
     text-align:center;
 }
@@ -159,6 +147,10 @@ section.testimonials {
     font-size: 12px;
     text-align: center;
     border-top: solid 1px #eee !important;
+}
+
+.inverse-footer {
+    background: #007968;
 }
 
 .site-footer .social-icons {
