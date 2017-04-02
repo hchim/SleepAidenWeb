@@ -12,9 +12,9 @@ var app = express();
 
 // view engine setup
 var hbs = exphbs.create({
-  layoutsDir: 'views',
-  defaultLayout: 'layout/default',
-  extname: '.hbs'
+    path: 'views',
+    defaultLayout: 'default',
+    extname: '.hbs'
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
@@ -44,7 +44,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', {'title': "Error", 'error': err});
 });
 
 module.exports = app;
