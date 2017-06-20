@@ -1,0 +1,18 @@
+<section id="download" class="download bg-primary text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="section-heading">Discover what all the buzz is about!</h2>
+                <p>{{appName}} is available on any mobile device! Download now to get started!</p>
+                <div class="badges">
+                    {{#exists download.googlePlay}}
+                        <a class="badge-link" target="_blank" href="{{download.googlePlay}}"><img src="/img/google-play-badge.svg" alt=""></a>
+                    {{/exists}}
+                    {{#exists download.appStore}}
+                        <a class="badge-link" target="_blank" href="{{download.appStore}}"><img src="/img/app-store-badge.svg" alt=""></a>
+                    {{/exists}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

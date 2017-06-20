@@ -14,8 +14,21 @@ var app = express();
 var hbs = exphbs.create({
     path: 'views',
     defaultLayout: 'default',
-    extname: '.hbs'
+    extname: '.hbs',
+    helpers: {
+        /**
+         * The {{#exists}} helper checks if a variable is defined.
+         */
+        exists: function(variable, options) {
+            if (typeof variable !== 'undefined') {
+                return options.fn(this);
+            } else {
+                return options.inverse(this);
+            }
+        }
+    }
 });
+
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 

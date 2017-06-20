@@ -1,0 +1,24 @@
+{{#exists contacts}}
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>We <i class="fa fa-heart"></i> new friends!</h2>
+            <ul class="list-inline list-social">
+                {{#exists contacts.twitter}}
+                <li class="social-twitter">
+                    <a href="{{contacts.twitter}}"><i class="fa fa-twitter"></i></a>
+                </li>
+                {{/exists}}
+                {{#exists contacts.facebook}}
+                <li class="social-facebook">
+                    <a href="{{contacts.facebook}}"><i class="fa fa-facebook"></i></a>
+                </li>
+                {{/exists}}
+                {{#exists contacts.google-plus}}
+                <li class="social-google-plus">
+                    <a href="{{contacts.google-plus}}"><i class="fa fa-google-plus"></i></a>
+                </li>
+                {{/exists}}
+            </ul>
+        </div>
+    </section>
+{{/exists}}
