@@ -30,7 +30,8 @@ router.get('/alphabetsong', function (req, res, next) {
         appName: 'Alphabet Song',
         demoImage: '/img/alphabetsong/Screenshot0.png',
         download: {
-            googlePlay: 'https://play.google.com/store/apps/details?id=com.sleepaiden.alphebetsong'
+            googlePlay: 'https://play.google.com/store/apps/details?id=com.sleepaiden.alphebetsong',
+            amazon: 'https://www.amazon.com/dp/B072X1FZCN/'
         },
         title: 'Alphabet Song - For stimulating the initial sounds of the little one',
         desc: 'Alphabet song is designed for you to use visual, auditory and tactile cues to stimulate the initial sounds of the little one.'
